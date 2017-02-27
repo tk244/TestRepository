@@ -1,5 +1,6 @@
     public function beginTransaction()
     {
+    	// comment
 		if (defined('MASTER_DBSERVER') && BaseDb::$intransaction) return;
 		BaseDb::$intransaction = true;
         $this->conn->beginTransaction();
