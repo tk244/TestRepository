@@ -1,13 +1,6 @@
-aaa
-BBB
-CCC
-ddd
-eee
-ƒRƒƒ“ƒg’Ç‰Á
-000
-111
-222
-333
-zzz
-999
-000
+    public function beginTransaction()
+    {
+		if (defined('MASTER_DBSERVER') && BaseDb::$intransaction) return;
+		BaseDb::$intransaction = true;
+        $this->conn->beginTransaction();
+    }
