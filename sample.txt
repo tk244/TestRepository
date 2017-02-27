@@ -1,6 +1,8 @@
     public function beginTransaction()
     {
+    	// process1
 		if (defined('MASTER_DBSERVER') && BaseDb::$intransaction) return;
+		// Transaction start
 		BaseDb::$intransaction = true;
         $this->conn->beginTransaction();
     }
