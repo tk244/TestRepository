@@ -2,6 +2,7 @@
     {
     	// ˆ—1
 		if (defined('MASTER_DBSERVER') && BaseDb::$intransaction) return;
+		// aaa
 		BaseDb::$intransaction = true;
         $this->conn->beginTransaction();
     }
